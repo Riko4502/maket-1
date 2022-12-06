@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'TT Lakes';
-    src: url('./css/font/TTLakes-Light.ttf');
+    src: url('css/font/TTLakes-Light.ttf');
     font-weight: 500;
 }
 
@@ -60,7 +60,7 @@ ul li {
     .burger  {
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url('./img/burger.svg') ;
+        background-image: url('img/burger.svg') ;
     }
 
     .desktop, .not-mobial {
@@ -71,12 +71,12 @@ ul li {
     .repair-request { 
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url('./img/repair-request.svg');
+        background-image: url('img/repair-request.svg');
     }
     .repair-status {
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url('./img/repair-status.svg');
+        background-image: url('img/repair-status.svg');
     }
 
     /* Основной блок */
@@ -164,7 +164,7 @@ ul li {
         z-index: 10;
         background-repeat: no-repeat;
         background-position: left;
-        background-image: url('./img/expand.svg');
+        background-image: url('img/expand.svg');
     }
 
     p {
@@ -225,36 +225,36 @@ ul li {
     .burger  {
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url('./img/burger.svg') ;
+        background-image: url('img/burger.svg') ;
     }
 
     .call  {
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url('./img/call.svg') ;
+        background-image: url('img/call.svg') ;
     }
     .chat  {
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url('./img/chat.svg') ;
+        background-image: url('img/chat.svg') ;
     }
 
     .profile  {
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url('./img/profile.svg') ;
+        background-image: url('img/profile.svg') ;
     }
 
     .repair-request { 
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url('./img/repair-request.svg');
+        background-image: url('img/repair-request.svg');
     }
 
     .repair-status {
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url('./img/repair-status.svg');
+        background-image: url('img/repair-status.svg');
     }
 
     /* Основной блок */
@@ -354,7 +354,7 @@ ul li {
         z-index: 10;
         background-repeat: no-repeat;
         background-position: left;
-        background-image: url('./img/expand.svg');
+        background-image: url('img/expand.svg');
     }
 
     p {
@@ -411,12 +411,12 @@ ul li {
     .repair-request { 
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url('./img/repair-request.svg');
+        background-image: url('img/repair-request.svg');
     }
     .repair-status {
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url('./img/repair-status.svg');
+        background-image: url('img/repair-status.svg');
     }
 
     /* Основной блок */
@@ -514,7 +514,7 @@ ul li {
         z-index: 10;
         background-repeat: no-repeat;
         background-position: left;
-        background-image: url('./img/expand.svg');
+        background-image: url('img/expand.svg');
     }
 
     p {

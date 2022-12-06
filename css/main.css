@@ -1,0 +1,534 @@
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('./css/font/TTLakes-Light.ttf');
+    font-weight: 500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    
+    background: #F8F8F8;
+    font-family: 'TT Lakes';
+    font-size: 14px;
+    line-height: 18px;
+    overflow-x: hidden;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+    /* Навигация */
+    .block-nav_ul {
+        height: 88px;
+        background: #FFFFFF;  
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+        padding-left: 16px;
+    }
+
+    .item {
+        margin-right: 16px;
+    }
+
+    .right:last-child {
+        margin-left: auto;
+    }
+
+    .devider {
+        width: 2px;
+        height: 32px;
+        background: #EAEAEA;
+        margin-top: 4px;
+        border-radius: 1px;
+    }
+
+    .elem-border {
+        min-width: 40px;
+        min-height: 40px;
+        background: #FF3E79;
+        border-radius: 50%;
+    }
+
+    .burger  {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('./img/burger.svg') ;
+    }
+
+    .desktop, .not-mobial {
+        visibility: hidden;
+        display: none;
+    }
+
+    .repair-request { 
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('./img/repair-request.svg');
+    }
+    .repair-status {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('./img/repair-status.svg');
+    }
+
+    /* Основной блок */
+    .block-content {
+        padding-left: 16px;
+    }
+
+    .elem-title {
+        position: relative;
+        margin-top: 24px;
+        color: #1B1C21;
+        font-size: 28px;
+        line-height: 40px;
+        
+    }
+
+    .elem-title:before  {
+        content: "";
+        position: absolute;
+        left: -16px;
+        width: 4px;
+        height: 100%;
+        background-color: #41f6d7;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        z-index: 10;
+    }
+
+    /* блок слайдер */
+
+    .block-slider {
+        display:flex;
+        justify-content: space-between;
+        overflow:hidden;
+        overflow-x: scroll;
+        margin-top: 24px;
+    }
+
+    .block-slider::-webkit-scrollbar {
+        display: none;
+    }
+
+    .items {
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+        font-size: 16px;
+        line-height: 24px;
+        white-space: nowrap;
+        height: 40px;
+        color: #7E7E82;
+        padding-right: 16px;
+    }
+
+    .mod-activiti {
+        padding-left: 16.54px;
+        padding-right: 9.3px;
+        margin-right: 16px;;
+        display: flex;
+        align-items:center;
+        box-sizing: border-box;
+        background: #FFFFFF;
+        border: 2px solid #B8FFEC;
+        border-radius: 6px;
+    }
+
+    /* Блок поста */
+    .block-post{
+        margin-top: 24px;
+    }
+
+    .elem-expand {
+        position: relative;
+        font-size: 16px;
+        line-height: 24px;
+        padding-left: 32px;
+    }
+
+    .elem-expand:before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 100%;
+        left: 12px;
+        z-index: 10;
+        background-repeat: no-repeat;
+        background-position: left;
+        background-image: url('./img/expand.svg');
+    }
+
+    p {
+        height: 90px;
+        color: #1B1C21;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.8px;
+        overflow: hidden;
+    }
+
+    .img-post {
+        max-width: 320px;
+        display: flex;
+        justify-content: center;
+        align-items:stretch;
+        margin-top: 20px;
+        margin-left: -16px;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1119px)  {
+
+    /* Навигация */
+
+    .block-nav_ul {
+        height: 88px;
+        background: #FFFFFF;  
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+        padding-left: 24px;
+    }
+
+    .item {
+        margin-right: 16px;
+    }
+
+    .block-nav_ul .right {
+        margin-left: auto;
+    }
+
+    .devider {
+        width: 2px;
+        height: 32px;
+        background: #EAEAEA;
+        border-radius: 1px;
+    }
+
+    .elem-border {
+        width: 40px;
+        height: 40px;
+        background: #FF3E79;
+        border-radius: 50%;
+    }
+
+    .burger  {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('./img/burger.svg') ;
+    }
+
+    .call  {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('./img/call.svg') ;
+    }
+    .chat  {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('./img/chat.svg') ;
+    }
+
+    .profile  {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('./img/profile.svg') ;
+    }
+
+    .repair-request { 
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('./img/repair-request.svg');
+    }
+
+    .repair-status {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('./img/repair-status.svg');
+    }
+
+    /* Основной блок */
+
+    .block-content {
+        padding-left: 16px;
+        padding-right: 24px;
+    }
+
+    .elem-title {
+        position: relative;
+        margin-top: 24px;
+        color: #1B1C21;
+        font-size: 28px;
+        line-height: 40px;
+        margin-top: 24px;
+    }
+
+    .elem-title:before  {
+        content: "";
+        position: absolute;
+        left: -16px;
+        width: 4px;
+        height: 100%;
+        background-color: #41f6d7;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        z-index: 10;
+    }
+
+    /* блок слайдер */
+
+    .block-slider {
+        display:flex;
+        justify-content: space-between;
+        overflow:hidden;
+        overflow-x: scroll;
+        margin-top: 24px;
+    }
+
+    .block-slider::-webkit-scrollbar {
+        display: none;
+    }
+
+    .items {
+        height: 40px;
+        color: #7E7E82;
+
+        padding-right: 16px;
+        margin-right: 16px;
+
+        font-size: 16px;
+        line-height: 24px;
+
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+        white-space: nowrap;
+
+    }
+
+    .mod-activiti {
+        padding-left: 16px;
+        box-sizing: border-box;
+        background: #FFFFFF;
+        border: 2px solid #B8FFEC;
+        border-radius: 6px;
+    }
+
+    /* Блок поста */
+    .desktop {
+        visibility: hidden;
+        display: none;
+    }
+
+    .block-post{
+        display: flex;
+        justify-content:space-between;
+        align-items:flex-start;
+        margin-top: 24px;
+    }
+
+    .elem-expand {
+        position: relative;
+        font-size: 16px;
+        line-height: 24px;
+        padding-left: 32px;
+        margin-top: 24px;
+    }
+
+    .elem-expand:before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 100%;
+        left: 12px;
+        z-index: 10;
+        background-repeat: no-repeat;
+        background-position: left;
+        background-image: url('./img/expand.svg');
+    }
+
+    p {
+        width: 312px;
+        color: #1B1C21;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.8px;
+        overflow: hidden;
+    }
+
+    .img-post {
+        width: 360px;
+        height: 260px;
+        display: flex;
+        justify-content: center;
+        align-items:stretch;
+        border-radius: 2%
+    }
+}
+
+@media (min-width: 1120px) {
+    .not-desktop {
+        visibility: hidden;
+        display: none;
+    }
+
+    .elem-x {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: auto;
+    }
+
+    .item {
+        display: inline-flex;
+        align-items: center;
+        color: #1B1C21;
+    }
+
+    .right:last-child {    
+        margin-left: auto;
+    }
+
+    .elem-border {
+        display: inline-flex;
+        width: 40px;
+        height: 40px;
+        background: #FF3E79;
+        border-radius: 50%;
+        margin-left: 8px;
+    }
+
+    .repair-request { 
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('./img/repair-request.svg');
+    }
+    .repair-status {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('./img/repair-status.svg');
+    }
+
+    /* Основной блок */
+    .block-content {
+        padding-left: 16px;
+        margin-right: 24px;
+    }
+
+    .elem-title {
+        position: relative;
+        margin-top: 24px;
+        color: #1B1C21;
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .elem-title:before  {
+        content: "";
+        position: absolute;
+        left: -16px;
+        width: 4px;
+        height: 100%;
+        background-color: #41f6d7;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        z-index: 10;
+    }
+
+    /* блок слайдер */
+    .block-slider {
+        display:flex;
+        justify-content: space-between;
+        overflow:hidden;
+        overflow-x: scroll;
+        padding-top: 24px;
+    }
+
+    .block-slider::-webkit-scrollbar {
+        display: none;
+    }
+
+    .items {
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+        font-size: 16px;
+        line-height: 24px;
+        white-space: nowrap;
+        height: 40px;
+        color: #7E7E82;
+        padding-right: 16px;
+    }
+
+    .mod-activiti {
+        padding-left: 16.54px;
+        padding-right: 9.3px;
+        margin-right: 16px;;
+        display: flex;
+        align-items:center;
+        box-sizing: border-box;
+        background: #FFFFFF;
+        border: 2px solid #B8FFEC;
+        border-radius: 6px;
+    }
+
+    /* Блок поста */
+    .block-post{
+        display: flex;
+        justify-content:space-between;
+        align-items:flex-start;
+        margin-top: 24px;
+    }
+
+    .desktop {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: #7E7E82;
+        padding-top: 24px;
+    }
+
+    .elem-expand {
+        position: relative;
+        font-size: 16px;
+        line-height: 24px;
+        padding-left: 32px;
+    }
+
+    .elem-expand:before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 100%;
+        left: 12px;
+        z-index: 10;
+        background-repeat: no-repeat;
+        background-position: left;
+        background-image: url('./img/expand.svg');
+    }
+
+    p {
+        min-width: 50%;
+        color: #1B1C21;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.8px;
+        overflow: hidden;
+    }
+
+    .img-post {
+        width: 532px;
+        height: 360px;
+        border-radius: 2%
+    }
+}

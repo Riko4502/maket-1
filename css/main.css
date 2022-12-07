@@ -1,8 +1,36 @@
 @font-face {
     font-family: 'TT Lakes';
-    src: url('font/TTLakes-Light.ttf');
-    font-weight: 500;
+    src: url('font/TTLakes-Bold.eot');
+    src: local('TT Lakes Bold'), local('TTLakes-Bold'),
+        url('font/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+        url('font/TTLakes-Bold.woff') format('woff'),
+        url('font/TTLakes-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
 }
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('font/TTLakes-Medium.eot');
+    src: local('TT Lakes Medium'), local('TTLakes-Medium'),
+        url('font/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+        url('font/TTLakes-Medium.woff') format('woff'),
+        url('font/TTLakes-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('font/TTLakes-Regular.eot');
+    src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+        url('font/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+        url('font/TTLakes-Regular.woff') format('woff'),
+        url('font/TTLakes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 * {
     margin: 0;
@@ -80,7 +108,7 @@ ul li {
     }
 
     /* Основной блок */
-    .block-content {
+    .main-content {
         padding-left: 16px;
     }
 
@@ -107,19 +135,20 @@ ul li {
 
     /* блок слайдер */
 
-    .block-slider {
+    .sliderMenu {
         display:flex;
         justify-content: space-between;
         overflow:hidden;
         overflow-x: scroll;
         margin-top: 24px;
+        color: #7E7E82;
     }
 
-    .block-slider::-webkit-scrollbar {
+    .sliderMenu::-webkit-scrollbar {
         display: none;
     }
 
-    .items {
+    .sliderItems {
         display: flex;
         justify-content:flex-start;
         align-items: center;
@@ -131,7 +160,7 @@ ul li {
         padding-right: 16px;
     }
 
-    .mod-activiti {
+    .sliderActiv {
         padding-left: 16.54px;
         padding-right: 9.3px;
         margin-right: 16px;;
@@ -144,18 +173,19 @@ ul li {
     }
 
     /* Блок поста */
-    .block-post{
+    .main-post{
         margin-top: 24px;
     }
 
-    .elem-expand {
+    .expand {
         position: relative;
         font-size: 16px;
         line-height: 24px;
         padding-left: 32px;
+        font-weight:500;
     }
 
-    .elem-expand:before {
+    .expand:before {
         content: "";
         position: absolute;
         width: 16px;
@@ -258,7 +288,7 @@ ul li {
 
     /* Основной блок */
 
-    .block-content {
+    .main-content {
         padding-left: 16px;
         padding-right: 24px;
     }
@@ -286,19 +316,20 @@ ul li {
 
     /* блок слайдер */
 
-    .block-slider {
+    .sliderMenu {
         display:flex;
         justify-content: space-between;
         overflow:hidden;
         overflow-x: scroll;
         margin-top: 24px;
+        color: #7E7E82;
     }
 
-    .block-slider::-webkit-scrollbar {
+    .sliderMenu::-webkit-scrollbar {
         display: none;
     }
 
-    .items {
+    .sliderItems {
         height: 40px;
         color: #7E7E82;
 
@@ -315,7 +346,7 @@ ul li {
 
     }
 
-    .mod-activiti {
+    .sliderActiv {
         padding-left: 16px;
         box-sizing: border-box;
         background: #FFFFFF;
@@ -329,22 +360,23 @@ ul li {
         display: none;
     }
 
-    .block-post{
+    .main-post {
         display: flex;
         justify-content:space-between;
         align-items:flex-start;
         margin-top: 24px;
     }
 
-    .elem-expand {
+    .expand {
         position: relative;
         font-size: 16px;
         line-height: 24px;
         padding-left: 32px;
         margin-top: 24px;
+        font-weight:500;
     }
 
-    .elem-expand:before {
+    .expand:before {
         content: "";
         position: absolute;
         width: 16px;
@@ -363,6 +395,7 @@ ul li {
         line-height: 18px;
         letter-spacing: 0.8px;
         overflow: hidden;
+        padding-bottom: 10px;
     }
 
     .img-post {
@@ -397,6 +430,8 @@ ul li {
         display: inline-flex;
         align-items: center;
         color: #1B1C21;
+        margin-left: 32px;
+        font-weight:500;
     }
 
     .right:last-child {    
@@ -424,7 +459,7 @@ ul li {
     }
 
     /* Основной блок */
-    .block-content {
+    .main-content {
         padding-left: 16px;
         margin-right: 24px;
     }
@@ -435,6 +470,7 @@ ul li {
         color: #1B1C21;
         font-size: 28px;
         line-height: 40px;
+        font-weight: 900;
     }
 
     .elem-title:before  {
@@ -450,19 +486,20 @@ ul li {
     }
 
     /* блок слайдер */
-    .block-slider {
+    .sliderMenu {
         display:flex;
         justify-content: space-between;
         overflow:hidden;
         overflow-x: scroll;
         padding-top: 24px;
+        color: #7E7E82;
     }
 
-    .block-slider::-webkit-scrollbar {
+    .sliderMenu::-webkit-scrollbar {
         display: none;
     }
 
-    .items {
+    .sliderItems {
         display: flex;
         justify-content:flex-start;
         align-items: center;
@@ -474,7 +511,7 @@ ul li {
         padding-right: 16px;
     }
 
-    .mod-activiti {
+    .sliderActiv {
         padding-left: 16.54px;
         padding-right: 9.3px;
         margin-right: 16px;;
@@ -487,7 +524,7 @@ ul li {
     }
 
     /* Блок поста */
-    .block-post{
+    .main-post {
         display: flex;
         justify-content:space-between;
         align-items:flex-start;
@@ -500,16 +537,21 @@ ul li {
         letter-spacing: -0.2px;
         color: #7E7E82;
         padding-top: 24px;
+        padding-left: 32px;
+        font-weight:500;
     }
 
-    .elem-expand {
+    .expand {
         position: relative;
         font-size: 16px;
         line-height: 24px;
+
         padding-left: 32px;
+        color: #1B1C21;
+        font-weight:500;
     }
 
-    .elem-expand:before {
+    .expand:before {
         content: "";
         position: absolute;
         width: 16px;
@@ -528,6 +570,7 @@ ul li {
         line-height: 18px;
         letter-spacing: 0.8px;
         overflow: hidden;
+        padding-bottom: 13.78px;
     }
 
     .img-post {

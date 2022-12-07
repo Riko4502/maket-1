@@ -188,7 +188,6 @@ ul li {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1119px)  {
-
     /* Навигация */
 
     .block-nav_ul {
@@ -377,6 +376,11 @@ ul li {
 }
 
 @media (min-width: 1120px) {
+    .container {
+        max-width: 1120px;
+        margin: auto;
+    }
+    
     .not-desktop {
         visibility: hidden;
         display: none;

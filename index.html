@@ -7,6 +7,49 @@
         <title>Макет #1</title>
     </head>
     <body>
+        <div class="sidebar-nav"> 
+            <header class="head">
+                <nav>
+                    <ul class="nav">
+                        <li class="head__not-desktop nav__item  border close"></li>
+                        <li class="nav__item"><img src="css/img/logo.svg" alt="" width="96" height="50"></li>
+                        <li class="nav__item--right">
+                            <ul class="nav">
+                                <li class="nav__item border search"></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <ul class="sidebar sidebar-menu">
+                    <li class="sidebar-menu__item sidebar-menu__item-activ">Ремонт техники</li>
+                    <li class="sidebar-menu__item">Услуги и сервисы</li>
+                    <li class="sidebar-menu__item">Корпоративным клиентам</li>
+                    <li class="sidebar-menu__item">Продавцам техники</li>
+                    <li class="sidebar-menu__item">Партнерам</li>
+                    <li class="sidebar-menu__item">Производителям</li>
+                    <li class="sidebar-menu__item">Наши сервисные центры</li>
+                    <li class="sidebar-menu__item">Контакты</li>
+                </ul>
+            </header>
+
+            <footer class="footer sidebar">
+                <div>
+                    <span class="footer__nav border call"></span>
+                    <span class="footer__nav border chat"></span>
+                    <span class="footer__nav border profile"></span>
+                </div>  
+                <div class="email">mail@cps.com</div>
+                <h2 class="phone">8 800 890 8900</h2>
+                <div class="lang">
+                    <span class="lang--activ">RU</span>
+                    <span>EN</span>
+                    <span>CN</span>
+                </div>
+                
+            </footer>
+        </div>
+
         <div class="container">
             <header class="head__not-desktop">
                 <nav>
@@ -27,11 +70,11 @@
                 </nav>
             </header>
             <main class="main-content">
-                <div class="elem-x">
-                    <h1 class="elem-title">Услуги и сервисы</h1> 
+                <div class="main">
+                    <h1 class="main__title">Услуги и сервисы</h1> 
                     <div class="desktop right">
-                        <div class="item">Оставить заявку <div class="border repair-request"></div></div>
-                        <div class="item">Статус ремонта <div class="border repair-status"></div></div>
+                        <div class="item">Оставить заявку <div class="border repair-request border__indent--right"></div></div>
+                        <div class="item">Статус ремонта <div class="border repair-status border__indent--right"></div></div>
                     </div>
                 </div>
 
@@ -45,15 +88,30 @@
 
                 <h2 class="desktop">Отзывы</h2>
 
-                <div class="main-post">
+                <div class="main__post">
                     <div>
                         <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
                             <br><br>
                             Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
                         </p>
-                        <a class="expand">Читать далее</a>
+                        <a class="link--expand">Читать далее</a>
                     </div>
                     <img src="css/img/MG_3223.png" alt="" class="img-post">                   
+                </div>
+
+                <div class="slider--title">Ремонт техники различных брендов</div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="css/img/brand/lenovo.png"></div>
+                        <div class="swiper-slide"><img src="css/img/brand/samsung.png"></div>
+                        <div class="swiper-slide"><img src="css/img/brand/apple.png"></div>
+                        <div class="swiper-slide"><img src="css/img/brand/sony.png"></div>
+                        <div class="swiper-slide"><img src="css/img/brand/viewsonic.png"></div>
+                        <div class="swiper-slide"><img src="css/img/brand/acer.png"></div>
+                        <div class="swiper-slide"><img src="css/img/brand/hp.png"></div>
+                        <div class="swiper-slide"><img src="css/img/brand/bosch.png"></div>
+                    </div>
+                    <div class="swiper-pagination desktop"></div>
                 </div>
             </main>
           </div>

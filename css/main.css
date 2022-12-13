@@ -935,15 +935,14 @@ ul li {
 
 .border:hover {
     opacity: 0.5;
-    width: 50px;
-    height: 50px;
-    border:#1B1C21 1px solid;
+    width: 40px;
+    height: 40px;
+    border:#1B1C21 1px;
     -webkit-transition: All 0.8s ease;
     -moz-transition: All 0.8s ease;
     -o-transition: All 0.8s ease;
     -ms-transition: All 0.8s ease;
     transition: All 0.8s ease;
-
 }
 
 .border {
@@ -1045,8 +1044,4 @@ ul li {
     height: 1px;
     background-color: #41f6d7;
     z-index: 10;
-}
-
-.movie {
-    width: ;
 }

@@ -665,6 +665,7 @@ ul li {
         justify-content:flex-start;
         align-items: center;
         padding-left: 16px;
+        position:relative;
     }
 
     .nav__item {
@@ -933,24 +934,23 @@ ul li {
     z-index: 10;
 }
 
-.border:hover {
-    opacity: 0.5;
-    width: 40px;
-    height: 40px;
-    border:#1B1C21 1px;
-    -webkit-transition: All 0.8s ease;
-    -moz-transition: All 0.8s ease;
-    -o-transition: All 0.8s ease;
-    -ms-transition: All 0.8s ease;
-    transition: All 0.8s ease;
-}
-
 .border {
-    display: inline-flex;
+    display: inline-block;
     width: 40px;
     height: 40px;
     background: #FF3E79;
     border-radius: 50%;
+}
+
+.border:hover {
+    opacity: 0.5;
+    /*-webkit-transition: All 0.8s ease;
+    -moz-transition: All 0.8s ease;
+    -o-transition: All 0.8s ease;
+    -ms-transition: All 0.8s ease;*/
+    transform: scale(1.25); 
+    border: 1px solid #1B1C21;
+    box-sizing: border-box;
 }
 
 .burger  {

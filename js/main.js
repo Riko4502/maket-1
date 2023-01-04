@@ -1,40 +1,63 @@
-const slider = document.querySelector('.swiper');
+/*import Swiper from 'swiper';*/
 
-let mySwiper;
+var slider_nodes = document.querySelectorAll('.swiper');
 
-function mobileSlider() {
-
-    mySwiper = new Swiper('.swiper', {
-        spaceBetween: 30,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-    });
-    slider.dataset.mobile = 'true';
+var sliders = [];
+let swiper_setting = {
+    followFinger: false,
+    slideClass: 'swiper-slide',
+    observeParents: true,
+    slidesPerView: 'auto',
+    spaceBetween: 30,
+    watchOverflow: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+    }
 }
 
-if(window.screen.width < 768) mobileSlider();
+function mobileSlider() {
+   
+    [].forEach.call(slider_nodes, function(slider_node) {
+        var swiper = new Swiper(slider_node, swiper_setting);
+        
+        sliders.push(swiper);
+
+        if(window.screen.width < 768){
+            slider_node.dataset.mobile = 'true';
+            return sliders;
+        }
+        
+        if(slider_node.classList.contains('swiper-initialized')) 
+        {
+            slider_node.dataset.mobile = 'false';
+            swiper.disable();
+            return swiper.destroy();
+        }
+    });
+}
+
+mobileSlider();
 
 window.addEventListener('resize', () => {
-    if (window.screen.width < 768 && slider.dataset.mobile == 'false') mobileSlider();
-    
-
-    if (window.screen.width >= 768) {
-        slider.dataset.mobile = false;
-
-        if(slider.classList.contains('swiper-initialized')) mySwiper.destroy();
-    }
+    mobileSlider();
 });
 
-const btn = document.querySelector('.btn');
-const list = document.querySelector('.swiper-wrapper');
-const span = document.querySelector('.span');
+const btn = document.querySelectorAll('.btn');
 
-btn.addEventListener('click', function(e) {
-    btn.classList.toggle('arrows');
-    list.classList.toggle('swiper-wrapper--active');
+for(let i = 0; i < btn.length; i++) {
+    
+    let button = btn[i];
 
-    list.classList.contains('swiper-wrapper--active') ?  span.textContent = 'Скрыть' : span.textContent = 'Показать все';
+    button.addEventListener('click', function(e) {
 
-})
+        const list = document.querySelectorAll('.swiper-wrapper');
+        const span = document.querySelectorAll('.span');
+    
+        button.classList.toggle('arrows');
+        list[i].classList.toggle('swiper-wrapper--active');
+    
+        list[i].classList.contains('swiper-wrapper--active') ?  span[i].textContent = 'Показать все' : span[i].textContent = 'Скрыть';
+    
+    })
+}

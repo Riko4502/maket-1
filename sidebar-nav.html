@@ -11,10 +11,12 @@
             <header class="head">
                 <nav>
                     <ul class="nav">
-                        <li class="nav__item border close"></li>
+                        <li class="head__not-desktop nav__item  border close"></li>
                         <li class="nav__item"><img src="css/img/logo.svg" alt="" width="96" height="50"></li>
                         <li class="nav__item--right">
-                            <span class="nav__item border search"></span>
+                            <ul class="nav">
+                                <li class="nav__item border search"></li>
+                            </ul>
                         </li>
                     </ul>
                 </nav>
@@ -30,10 +32,11 @@
                     <li class="sidebar-menu__item">Контакты</li>
                 </ul>
             </header>
-            <footer class="footer sidebar">
+
+            <footer class="footerNav sidebar">
                 <div>
-                    <span class="footer__nav border call"></span>
-                    <span class="footer__nav border chat"></span>
+                    <span class="footer__nav border call open-modal" data-modal="2"></span>
+                    <span class="footer__nav border chat open-modal" data-modal="1"></span>
                     <span class="footer__nav border profile"></span>
                 </div>  
                 <div class="email">mail@cps.com</div>
@@ -42,8 +45,11 @@
                     <span class="lang--activ">RU</span>
                     <span>EN</span>
                     <span>CN</span>
-                </div>          
+                </div>
+                
             </footer>
         </div>
+
+        <script src="js/nav.js"></script>
     </body>
 </html>

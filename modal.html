@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODAL`s</title>
+    <link href="css/modal.css" rel="stylesheet">
+</head>
+<body>
+    <div class="modal hidden" data-modal="1">
+        <div class="modal__wrapper">
+            <div class="modal__title">
+                <span title="Закрыть окно" class="modal-close" title="Закрыть"></span>
+                <h2>Обратная связь </h2> 
+            </div>
+            <div class="modal__input">    
+                <input type="text" placeholder="Имя">
+                <input type="text" placeholder="Телефон">
+                <input type="text" placeholder="Электронная почта">
+                <textarea name="text" placeholder="Сообщение"></textarea>
+            </div>
+            <div class="modal__text">
+                Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей <a href="#">политикой конфиденциальности</a>
+            </div>
+            <div class="modal__btn">
+                <button>
+                    Отправить
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal hidden" data-modal="2">
+        <div class="modal__wrapper">
+            <div class="modal__title">
+                <span title="Закрыть окно" class="modal-close" title="Закрыть"></span>
+                <h2>Заказать звонок</h2> 
+            </div>
+            <div class="modal__input">    
+                <input type="text" placeholder="Телефон">
+            </div>
+            <div class="modal__text">
+                Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей <a href="#">политикой конфиденциальности</a>
+            </div>
+            <div class="modal__btn">
+                <button>
+                    Отправить
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    Тут есть текст и кнопка открытия modal окна 
+    <br>
+    <button class="repair-request open-modal" data-modal="1">
+        Обратная связь
+    </button>
+    <br>
+    <button class="repair-request open-modal" data-modal="2">
+        Заказать звонок
+    </button>
+    <script src="js/modal.js"></script>
+</body>
+</html>

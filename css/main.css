@@ -421,7 +421,7 @@ ul li {
     }
     
     .container {
-        /*max-width: 1120px;*/
+        max-width: 1120px;
         margin-right: auto;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -520,55 +520,41 @@ ul li {
 
     /* блок слайдер */
     .sliderMenu {
-        display:-webkit-box;
-        display:-ms-flexbox;
-        display:flex;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
+        display: flex;
+        justify-content: space-between;
         overflow:hidden;
         overflow-x: scroll;
         padding-top: 24px;
         color: #7E7E82;
+        height: 44px;
     }
 
     .sliderMenu::-webkit-scrollbar {
         display: none;
     }
 
-    .sliderItems {
-        display: -webkit-box;
-        display: -ms-flexbox;
+    .sliderItems  {
+        padding-left: 23px;
+        padding-right: 22px;
         display: flex;
-        -webkit-box-pack:start;
-            -ms-flex-pack:start;
-                justify-content:flex-start;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        font-size: 16px;
-        line-height: 24px;
-        white-space: nowrap;
+        justify-content: space-around;
+        align-items:center;
         height: 40px;
         color: #7E7E82;
-        padding-right: 16px;
     }
 
     .sliderItems:hover {
-        padding-left: 16.54px;
-        padding-right: 9.3px;
-        margin-right: 16px;;
-        display: -webkit-box;;
-        display: -ms-flexbox;;
-        display: flex;
-        -webkit-box-align:center;
-            -ms-flex-align:center;
-                align-items:center;
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-        background: #FFFFFF;
+        height: 36px;
+        padding-left: 21px;
+        padding-right: 20px;
+        background-color: #FFFFFF;
         border: 2px solid #B8FFEC;
         border-radius: 6px;
+    }
+
+    .sliderItems a {
+        color: #7E7E82;
+        text-decoration: none;
     }
 
     /* Блок поста */
@@ -594,6 +580,7 @@ ul li {
     }
 
     .main-content__text {
+        width: 490px;
         color: #1B1C21;
         font-size: 14px;
         line-height: 18px;

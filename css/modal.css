@@ -14,8 +14,11 @@
 }
 
 .open {
-    transform:scale(1);
-    animation: fadeIn 3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+    -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+            transform:scale(1);
+    -webkit-animation: fadeIn 3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+            animation: fadeIn 3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
 }
 
 @media screen and (max-width: 1439px)  {
@@ -26,18 +29,29 @@
         background-color: rgb(100%, 100%, 100%, 1);
         margin-left: auto;
     
+        display: -webkit-box;
+    
+        display: -ms-flexbox;
+    
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     
         padding-left: 16px;
         padding-top: 40px;
 
         -webkit-box-shadow: -5px 4px 8px 0px rgba(34, 60, 80, 0.2);
-        -moz-box-shadow: -5px 4px 8px 0px rgba(34, 60, 80, 0.2);
         box-shadow: -5px 4px 8px 0px rgba(34, 60, 80, 0.2);
 
-        transform:translateX(1500px);
-        animation: roadRunnerIn 3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        -webkit-transform:translateX(1500px);
+
+            -ms-transform:translateX(1500px);
+
+                transform:translateX(1500px);
+        -webkit-animation: roadRunnerIn 3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+                animation: roadRunnerIn 3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
     }
 
     .modal-close {
@@ -86,6 +100,22 @@
     
         background: #FFFFFF;
         border: 1px solid #EAEAEA;
+    }
+    
+    .modal__input input::-webkit-input-placeholder, .modal__input textarea::-webkit-input-placeholder { 
+        color: #B5B6BC;
+    }
+    
+    .modal__input input::-moz-placeholder, .modal__input textarea::-moz-placeholder { 
+        color: #B5B6BC;
+    }
+    
+    .modal__input input:-ms-input-placeholder, .modal__input textarea:-ms-input-placeholder { 
+        color: #B5B6BC;
+    }
+    
+    .modal__input input::-ms-input-placeholder, .modal__input textarea::-ms-input-placeholder { 
+        color: #B5B6BC;
     }
     
     .modal__input input::placeholder,
@@ -166,9 +196,13 @@
     }
 
     .modal__btn:hover {
-        transform: scale(1.02);
+        -webkit-transform: scale(1.02);
+            -ms-transform: scale(1.02);
+                transform: scale(1.02);
         -webkit-filter: drop-shadow(0px 4px 2px #909090);
         filter: drop-shadow(0px 4px 2px #909090);
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
         transition: 0.3s;
     }
 }
@@ -181,18 +215,29 @@
         background-color: rgb(100%, 100%, 100%, 1);
         margin-left: auto;
     
+        display: -webkit-box;
+    
+        display: -ms-flexbox;
+    
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     
         padding-left: 32px;
         padding-top: 40px;
 
         -webkit-box-shadow: -5px 4px 8px 0px rgba(34, 60, 80, 0.2);
-        -moz-box-shadow: -5px 4px 8px 0px rgba(34, 60, 80, 0.2);
         box-shadow: -5px 4px 8px 0px rgba(34, 60, 80, 0.2);
 
-        transform:translateX(1500px);
-        animation: roadRunnerIn 3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        -webkit-transform:translateX(1500px);
+
+            -ms-transform:translateX(1500px);
+
+                transform:translateX(1500px);
+        -webkit-animation: roadRunnerIn 3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+                animation: roadRunnerIn 3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
     }
 
     .modal-close {
@@ -239,6 +284,22 @@
     
         background: #FFFFFF;
         border: 1px solid #EAEAEA;
+    }
+    
+    .modal__input input::-webkit-input-placeholder, .modal__input textarea::-webkit-input-placeholder { 
+        color: #B5B6BC;
+    }
+    
+    .modal__input input::-moz-placeholder, .modal__input textarea::-moz-placeholder { 
+        color: #B5B6BC;
+    }
+    
+    .modal__input input:-ms-input-placeholder, .modal__input textarea:-ms-input-placeholder { 
+        color: #B5B6BC;
+    }
+    
+    .modal__input input::-ms-input-placeholder, .modal__input textarea::-ms-input-placeholder { 
+        color: #B5B6BC;
     }
     
     .modal__input input::placeholder,
@@ -320,10 +381,23 @@
     }
 
     .modal__btn:hover {
-        transform: scale(1.02);
+        -webkit-transform: scale(1.02);
+            -ms-transform: scale(1.02);
+                transform: scale(1.02);
         -webkit-filter: drop-shadow(0px 4px 2px #909090);
         filter: drop-shadow(0px 4px 2px #909090);
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
         transition: 0.3s;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        background:rgba(100%, 100%, 100%,.0);
+    }
+    100% {
+        background:rgba(100%, 100%, 100%, 0.96);
     }
 }
 
@@ -336,14 +410,32 @@
     }
 }
 
-@keyframes roadRunnerIn {
+@-webkit-keyframes roadRunnerIn {
     0% {
-        transform:translateX(-1500px) skewX(30deg) scaleX(1.3);
+        -webkit-transform:translateX(-1500px) skewX(30deg) scaleX(1.3);
+                transform:translateX(-1500px) skewX(30deg) scaleX(1.3);
     }
     70% {
-        transform:translateX(30px) skewX(0deg) scaleX(.9);
+        -webkit-transform:translateX(30px) skewX(0deg) scaleX(.9);
+                transform:translateX(30px) skewX(0deg) scaleX(.9);
     }
     100% {
-        transform:translateX(0px) skewX(0deg) scaleX(1);
+        -webkit-transform:translateX(0px) skewX(0deg) scaleX(1);
+                transform:translateX(0px) skewX(0deg) scaleX(1);
+    }
+}
+
+@keyframes roadRunnerIn {
+    0% {
+        -webkit-transform:translateX(-1500px) skewX(30deg) scaleX(1.3);
+                transform:translateX(-1500px) skewX(30deg) scaleX(1.3);
+    }
+    70% {
+        -webkit-transform:translateX(30px) skewX(0deg) scaleX(.9);
+                transform:translateX(30px) skewX(0deg) scaleX(.9);
+    }
+    100% {
+        -webkit-transform:translateX(0px) skewX(0deg) scaleX(1);
+                transform:translateX(0px) skewX(0deg) scaleX(1);
     }
 }

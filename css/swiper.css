@@ -6,6 +6,8 @@
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
     .swiper-wrapper {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
         display: inline-flex;
         padding-left: 32px;
         padding-top: 16px;
@@ -13,8 +15,12 @@
     }
 
     .swiper-pagination {
+        display:-webkit-box;
+        display:-ms-flexbox;
         display:flex;
-        justify-content:center;
+        -webkit-box-pack:center;
+            -ms-flex-pack:center;
+                justify-content:center;
         margin-top:16px
     }
 
@@ -40,38 +46,52 @@
 
     .swiper-pagination-bullets-dynamic .swiper-pagination-bullet
     {
-        transform:scale(.33);
+        -webkit-transform:scale(.33);
+            -ms-transform:scale(.33);
+                transform:scale(.33);
         position:relative
     }
 
     .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active
     {
-        transform:scale(1)
+        -webkit-transform:scale(1);
+            -ms-transform:scale(1);
+                transform:scale(1)
     }
 
     .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main
     {
-        transform:scale(1)
+        -webkit-transform:scale(1);
+            -ms-transform:scale(1);
+                transform:scale(1)
     }
 
     .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev
     {
-        transform:scale(.66)
+        -webkit-transform:scale(.66);
+            -ms-transform:scale(.66);
+                transform:scale(.66)
     }
 
     .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev
     {
-        transform:scale(.33)
+        -webkit-transform:scale(.33);
+            -ms-transform:scale(.33);
+                transform:scale(.33)
     }
 
     .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next
     {
-        transform:scale(.66)
+        -webkit-transform:scale(.66);
+            -ms-transform:scale(.66);
+                transform:scale(.66)
     }
 
     .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next
     {
-        transform:scale(.33)
+        -webkit-transform:scale(.33);
+            -ms-transform:scale(.33);
+                transform:scale(.33)
     }
 
     .swiper-pagination-bullet
@@ -89,9 +109,11 @@
         border:none;
         margin:0;
         padding:0;
-        box-shadow:none;
+        -webkit-box-shadow:none;
+                box-shadow:none;
         -webkit-appearance:none;
-        appearance:none
+        -moz-appearance:none;
+             appearance:none
     }
 
     .swiper-pagination-clickable .swiper-pagination-bullet
@@ -114,7 +136,8 @@
     {
         right:10px;
         top:50%;
-        transform:translate3d(0px,-50%,0)
+        -webkit-transform:translate3d(0px,-50%,0);
+                transform:translate3d(0px,-50%,0)
     }
 
     .swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet,.swiper-vertical>.swiper-pagination-bullets .swiper-pagination-bullet
@@ -126,13 +149,17 @@
     .swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,.swiper-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic
     {
         top:50%;
-        transform:translateY(-50%);
+        -webkit-transform:translateY(-50%);
+            -ms-transform:translateY(-50%);
+                transform:translateY(-50%);
         width:8px
     }
 
     .swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,.swiper-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet
     {
         display:inline-block;
+        -webkit-transition:.2s transform,.2s top;
+        -o-transition:.2s transform,.2s top;
         transition:.2s transform,.2s top
     }
 
@@ -144,17 +171,23 @@
     .swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic
     {
         left:50%;
-        transform:translateX(-50%);
+        -webkit-transform:translateX(-50%);
+            -ms-transform:translateX(-50%);
+                transform:translateX(-50%);
         white-space:nowrap
     }
 
     .swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet
     {
+        -webkit-transition:.2s transform,.2s left;
+        -o-transition:.2s transform,.2s left;
         transition:.2s transform,.2s left
     }
 
     .swiper-horizontal.swiper-rtl>.swiper-pagination-bullets-dynamic .swiper-pagination-bullet
     {
+        -webkit-transition:.2s transform,.2s right;
+        -o-transition:.2s transform,.2s right;
         transition:.2s transform,.2s right
     }
 
@@ -172,13 +205,19 @@
         top:0;
         width:100%;
         height:100%;
-        transform:scale(0);
-        transform-origin:left top
+        -webkit-transform:scale(0);
+            -ms-transform:scale(0);
+                transform:scale(0);
+        -webkit-transform-origin:left top;
+            -ms-transform-origin:left top;
+                transform-origin:left top
     }
 
     .swiper-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill
     {
-        transform-origin:right top
+        -webkit-transform-origin:right top;
+            -ms-transform-origin:right top;
+                transform-origin:right top
     }
 
     .swiper-horizontal>.swiper-pagination-progressbar,.swiper-pagination-progressbar.swiper-pagination-horizontal,.swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,.swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite
@@ -211,10 +250,11 @@
         border: 1px solid #EAEAEA;
         border-radius: 6px;
         margin: 0 0 0 -14px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
             -webkit-box-align: center;
             -ms-flex-align: center;
-            -webkit-align-items: center;
             align-items: center;
     }
     
@@ -224,9 +264,11 @@
         max-width: 40px;
         max-height: 40px;
         right: 16px;
+        z-index: 10;    
+    }
+
+    .swiper__boxs::after {
         bottom: 16px;
-        z-index: 10;
-       
     }
 
     .swiper__boxs::after {
@@ -244,8 +286,14 @@
         font-weight: 600;
         color: #1B1C21;
 
+        display: -webkit-box;
+
+        display: -ms-flexbox;
+
         display: flex;
-        align-items: flex-start
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start
     }
 
     .slider--title {
@@ -254,6 +302,8 @@
         padding: 16px 16px;
         font-size: 16px;
         line-height: 24px;
+        background: -webkit-gradient(linear, right top, left top, from(#FFFFFF), color-stop(98.61%, #F8F8F8));
+        background: -o-linear-gradient(right, #FFFFFF 0%, #F8F8F8 98.61%);
         background: linear-gradient(270deg, #FFFFFF 0%, #F8F8F8 98.61%);
         text-transform: uppercase;
         color: #7E7E82;
@@ -261,6 +311,8 @@
     }
 
     .tables {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
         display: inline-flex;
         /*margin-left: 16px;*/
         margin-top: 16px;
@@ -302,9 +354,14 @@
 
 @media screen and (min-width: 768px) and (max-width: 1439px)  {
     .swiper:not(.swiper-tables) .swiper-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         padding-left: 24px;
         padding-top: 24px;
         margin-bottom: 32px;
@@ -321,10 +378,13 @@
         margin-right: 24px;
         margin-bottom: 16px;
 
+        display: -webkit-box;
+
+        display: -ms-flexbox;
+
         display: flex;
         -webkit-box-align: center;
         -ms-flex-align: center;
-        -webkit-align-items: center;
         align-items: center;
     }
     
@@ -334,8 +394,11 @@
         width: 40px;
         height: 40px;
         right: 16px;
-        bottom: 16px;
         z-index: 10;
+    }
+
+    .swiper__boxs::after {
+        bottom: 16px;
     }
 
     .btn{
@@ -367,8 +430,14 @@
         font-weight: 600;
         color: #1B1C21;
 
+        display: -webkit-box;
+
+        display: -ms-flexbox;
+
         display: flex;
-        align-items: flex-start
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start
     }
 
     .tables-th {
@@ -381,17 +450,44 @@
         opacity: 0.72;
         background-color: #F8F8F8;
 
+        display: -ms-grid;
+
         display: grid;
+        -ms-grid-columns: 34% 21% 20% 20%;
         grid-template-columns: 34% 21% 20% 20%;
+        -ms-grid-rows: 35px;
         grid-template-rows: 35px;
         padding-left: 16px;
         padding-top: 31px;
         font-weight: 500;
     }
 
+    .tables-th > *:nth-child(1) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+
+    .tables-th > *:nth-child(2) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 2;
+    }
+
+    .tables-th > *:nth-child(3) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 3;
+    }
+
+    .tables-th > *:nth-child(4) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 4;
+    }
+
     .tables-td {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 33% 10px 20% 10px 20% 10px 20%;
         grid-template-columns: 33% 20% 20% 20%;
+        -ms-grid-rows: 18px;
         grid-template-rows: 18px;
         gap: 10px;
 
@@ -406,6 +502,26 @@
 
         color: #1B1C21;
         position: relative;
+    }
+
+    .tables-td > *:nth-child(1) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+
+    .tables-td > *:nth-child(2) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 3;
+    }
+
+    .tables-td > *:nth-child(3) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 5;
+    }
+
+    .tables-td > *:nth-child(4) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 7;
     }
 
     .tables {
@@ -424,6 +540,8 @@
         padding: 16px 24px;
         font-size: 16px;
         line-height: 24px;
+        background: -webkit-gradient(linear, right top, left top, from(#FFFFFF), color-stop(98.61%, #F8F8F8));
+        background: -o-linear-gradient(right, #FFFFFF 0%, #F8F8F8 98.61%);
         background: linear-gradient(270deg, #FFFFFF 0%, #F8F8F8 98.61%);
         text-transform: uppercase;
         color: #7E7E82;
@@ -434,10 +552,15 @@
 
 @media (min-width: 1440px)  {
     .swiper:not(.swiper-tables) .swiper-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        padding-left: 24px;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        padding-left: 34px;
         padding-top: 24px;
         margin-bottom: 32px;
     }
@@ -453,10 +576,13 @@
         margin-right: 24px;
         margin-bottom: 16px;
 
+        display: -webkit-box;
+
+        display: -ms-flexbox;
+
         display: flex;
         -webkit-box-align: center;
         -ms-flex-align: center;
-        -webkit-align-items: center;
         align-items: center;
     }
     
@@ -466,8 +592,11 @@
         width: 40px;
         height: 40px;
         right: 16px;
-        bottom: 16px;
         z-index: 10;
+    }
+
+    .swiper__boxs::after {
+        bottom: 16px;
     }
 
     .swiper-wrapper--active{
@@ -489,14 +618,20 @@
         font-weight: 600;
         color: #1B1C21;
 
+        display: -webkit-box;
+
+        display: -ms-flexbox;
+
         display: flex;
-        align-items: flex-start
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start
     }
 
     .btn{
         display: block;
         position: relative;
-        left: 24px;
+        left: 32px;
     }
 
     .swiper-tables {
@@ -516,16 +651,38 @@
         mix-blend-mode: normal;
         opacity: 0.72;
 
+        display: -ms-grid;
+
         display: grid;
+        -ms-grid-columns: 34% 21% 20%;
         grid-template-columns: 34% 21% 20%;
+        -ms-grid-rows: 35px;
         grid-template-rows: 35px;
         padding-left: 24px;
     }
 
+    .tables-th > *:nth-child(1) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+
+    .tables-th > *:nth-child(2) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 2;
+    }
+
+    .tables-th > *:nth-child(3) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 3;
+    }
+
     .tables-td {
         background-color: #FFFFFF;
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 33% 10px 20% 10px 20% 10px 20%;
         grid-template-columns: 33% 20% 20% 20%;
+        -ms-grid-rows: 18px;
         grid-template-rows: 18px;
         gap: 10px;
 
@@ -540,6 +697,26 @@
 
         color: #1B1C21;
         position: relative;
+    }
+
+    .tables-td > *:nth-child(1) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+
+    .tables-td > *:nth-child(2) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 3;
+    }
+
+    .tables-td > *:nth-child(3) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 5;
+    }
+
+    .tables-td > *:nth-child(4) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 7;
     }
 
     /*.btn-submit {
@@ -560,6 +737,8 @@
         padding: 16px 32px;
         font-size: 16px;
         line-height: 24px;
+        background: -webkit-gradient(linear, right top, left top, from(#FFFFFF), color-stop(98.61%, #F8F8F8));
+        background: -o-linear-gradient(right, #FFFFFF 0%, #F8F8F8 98.61%);
         background: linear-gradient(270deg, #FFFFFF 0%, #F8F8F8 98.61%);
         text-transform: uppercase;
         color: #7E7E82;
@@ -595,7 +774,8 @@ div .btn-submit {
 
     margin-left: auto;
     padding-left: 15px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .btn-submit {
@@ -611,26 +791,25 @@ div .btn-submit {
     bottom: 8px;
 }
 
+.btn-submit:hover {
+    -webkit-transition: scale(1.25); 
+    -moz-transition: scale(1.25); 
+    -o-transition: scale(1.25); 
+    -ms-transition: scale(1.25); 
+    -webkit-transform: scale(1.25); 
+        -ms-transform: scale(1.25); 
+            transform: scale(1.25); 
+    border: 0.2px solid #1B1C21;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
 .btn-submit::after {
     content: url('img/dropdown.svg');
     position: absolute;
     left: 95px;
 }
 
-.text {
-    margin-left: 24px;
-    font-family: 'TT Lakes';
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.2px;
-    color: #1B1C21;
-    width: 288px;
-    height: 138px;
-}
-
-.text--offer span::after {
-    content: url('img/line.svg');
-    position: absolute;
-    right: -14px;
-    bottom: -2px;
+.swiper-wrapper{
+    overflow: hidden;
 }

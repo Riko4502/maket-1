@@ -61,3 +61,10 @@ for(let i = 0; i < btn.length; i++) {
     
     })
 }
+
+const link = document.querySelector('.link--expand');
+
+link.addEventListener('click', function(e) {
+    const height = document.querySelector('.main-content__text');
+    height.classList.toggle('main-content__height');
+});

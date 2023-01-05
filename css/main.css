@@ -94,55 +94,42 @@ ul li {
     /* блок слайдер */
 
     .sliderMenu {
-        display:-webkit-box;
-        display:-ms-flexbox;
-        display:flex;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
+        display: -webkit-inline-box;
+        justify-content: space-between;
         overflow:hidden;
         overflow-x: scroll;
-        margin-top: 24px;
+        padding-top: 24px;
         color: #7E7E82;
+        height: 44px;
     }
 
     .sliderMenu::-webkit-scrollbar {
         display: none;
     }
 
-    .sliderItems {
-        display: -webkit-box;
-        display: -ms-flexbox;
+    .sliderItems  {
+        padding-left: 16.54px;
+        padding-right: 9.3px;
         display: flex;
-        -webkit-box-pack:start;
-            -ms-flex-pack:start;
-                justify-content:flex-start;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        font-size: 16px;
-        line-height: 24px;
-        white-space: nowrap;
+        justify-content: space-around;
+        align-items:center;
         height: 40px;
         color: #7E7E82;
-        padding-right: 16px;
     }
 
     .sliderItems:hover {
-        padding-left: 16.54px;
-        padding-right: 9.3px;
-        margin-right: 16px;;
-        display: -webkit-box;;
-        display: -ms-flexbox;;
-        display: flex;
-        -webkit-box-align:center;
-            -ms-flex-align:center;
-                align-items:center;
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box;
+        height: 36px;
+        padding-left: 14.54px;
+        padding-right: 7.3px;
+
         background: #FFFFFF;
         border: 2px solid #B8FFEC;
         border-radius: 6px;
+    }
+
+    .sliderItems a {
+        color: #7E7E82;
+        text-decoration: none;
     }
 
     /* Блок поста */
@@ -282,16 +269,13 @@ ul li {
 
     /* блок слайдер */
     .sliderMenu {
-        display:-webkit-box;
-        display:-ms-flexbox;
-        display:flex;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
+        display: flex;
+        justify-content: space-between;
         overflow:hidden;
         overflow-x: scroll;
-        margin-top: 24px;
+        padding-top: 24px;
         color: #7E7E82;
+        height: 44px;
     }
 
     .sliderMenu::-webkit-scrollbar {
@@ -299,37 +283,27 @@ ul li {
     }
 
     .sliderItems {
+        padding-left: 16.67px;
+        padding-right: 9.38px;
+        display: flex;
+        justify-content: space-around;
+        align-items:center;
         height: 40px;
         color: #7E7E82;
-
-        padding-right: 16px;
-        margin-right: 16px;
-
-        font-size: 16px;
-        line-height: 24px;
-
-        display: -webkit-box;
-
-        display: -ms-flexbox;
-
-        display: flex;
-        -webkit-box-pack:start;
-            -ms-flex-pack:start;
-                justify-content:flex-start;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        white-space: nowrap;
-
     }
 
     .sliderItems:hover {
-        padding-left: 16px;
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box;
+        height: 36px;
+        padding-left: 14.67px;
+        padding-right: 7.38px;
         background: #FFFFFF;
         border: 2px solid #B8FFEC;
         border-radius: 6px;
+    }
+
+    .sliderItems a {
+        color: #7E7E82;
+        text-decoration: none;
     }
 
     /* Блок поста */

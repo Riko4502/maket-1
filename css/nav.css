@@ -327,13 +327,13 @@
     display: grid;
 }
 
-.desktop {
+/*.desktop {
     -webkit-transform:scale(-1);
     -ms-transform:scale(-1);
     transform:scale(-1);
 -webkit-animation: fadeIn 1s cubic-bezier(0.165, 0.840, 0.440, 0.96) forwards;
     animation: fadeIn 1s cubic-bezier(0.165, 0.840, 0.440, 0.96) forwards; 
-}
+}*/
 
 
 @-webkit-keyframes fadeIn {

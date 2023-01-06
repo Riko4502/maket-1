@@ -19,6 +19,7 @@
             transform:scale(1);
     -webkit-animation: fadeIn 3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
             animation: fadeIn 3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+            overflow: scroll;        
 }
 
 @media screen and (max-width: 1439px)  {
@@ -52,6 +53,7 @@
                 transform:translateX(1500px);
         -webkit-animation: roadRunnerIn 3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
                 animation: roadRunnerIn 3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        
     }
 
     .modal-close {

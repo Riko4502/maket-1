@@ -19,13 +19,14 @@
             transform:scale(1);
     -webkit-animation: fadeIn 3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
             animation: fadeIn 3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+    overflow: scroll;
                
 }
 
 @media screen and (max-width: 1439px)  {
     .modal__wrapper {
         max-width: 320px;
-        min-height: 100vh;
+        min-height: 676px;
     
         background-color: rgb(100%, 100%, 100%, 1);
         margin-left: auto;
@@ -54,10 +55,6 @@
         -webkit-animation: roadRunnerIn 3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
                 animation: roadRunnerIn 3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
         
-    }
-
-    .open {
-        overflow: scroll;
     }
 
     .modal-close {

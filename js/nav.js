@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         nav.forEach(function(item){
             const navBurger  = item.querySelector('.burger');
+            
             navBurger.addEventListener('click', function(e){
                 const navOpen = item.querySelector('.sidebar-nav');
                 
@@ -14,19 +15,19 @@ document.addEventListener('DOMContentLoaded', function() {
                     navOpen.classList.toggle('desktop');
                 }
                 else {
-                    const navBlur = item.querySelector('nav');
+                    const navBlur = item.querySelector('nav, .close');
                     navBlur.addEventListener('click', function(e){
                         navBurger.classList.toggle('close');
                         navBurger.classList.toggle('burger');
                         navOpen.classList.toggle('nav-hide');
                         navOpen.classList.toggle('desktop');
+
                     });
                 }
-            }); 
+                
+            }, {once: true});
         });
-    }
-
-    
+    } 
 });
 
 
